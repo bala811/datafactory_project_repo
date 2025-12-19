@@ -6,8 +6,8 @@
 		"type": "FileServer",
 		"typeProperties": {
 			"host": "C:\\",
-			"userId": "ybsvi",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzODM0Y2Y2Zi1iZTdjLTQ5OTgtODc2Yy0xNzlhNjA3NDAzOTgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"userId": "ybsvinod@gmail.com",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlMzJlOTYyMy0wZTA3LTQ3NDMtYTkwOS03NTM2NTViNDVjMDMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "selfhosted-sqlserver",
