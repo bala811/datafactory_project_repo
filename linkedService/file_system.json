@@ -7,7 +7,7 @@
 		"typeProperties": {
 			"host": "C:\\",
 			"userId": "ybsvi",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI1NGZkMjkwYy0wMGMwLTRiODctOWU3Yi1lZWU0NWQ2YTFhNzIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzODM0Y2Y2Zi1iZTdjLTQ5OTgtODc2Yy0xNzlhNjA3NDAzOTgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "selfhosted-sqlserver",
