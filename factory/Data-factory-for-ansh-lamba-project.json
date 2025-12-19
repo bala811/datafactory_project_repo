@@ -1,0 +1,9 @@
+{
+	"name": "Data-factory-for-ansh-lamba-project",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cf939b1c-24a8-41f3-96fd-11847feb8fdc",
+		"tenantId": "009be4ae-7222-455a-a357-9744eb40cbf2"
+	}
+}
