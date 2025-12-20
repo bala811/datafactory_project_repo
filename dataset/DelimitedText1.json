@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"psourcefiles": {
+			"pfilename": {
 				"type": "string"
 			}
 		},
@@ -16,7 +16,7 @@
 			"location": {
 				"type": "FileServerLocation",
 				"fileName": {
-					"value": "@dataset().psourcefiles",
+					"value": "@dataset().pfilename",
 					"type": "Expression"
 				}
 			},
