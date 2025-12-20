@@ -29,7 +29,7 @@
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
+							"type": "FileServerWriteSettings"
 						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
@@ -93,8 +93,11 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "ls_onpremtoadls",
-						"type": "DatasetReference"
+						"referenceName": "ds_onprem_to_adls",
+						"type": "DatasetReference",
+						"parameters": {
+							"pfilename": "xyz"
+						}
 					}
 				]
 			}
