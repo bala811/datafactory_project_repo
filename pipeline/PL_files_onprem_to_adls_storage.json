@@ -72,7 +72,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "DelimitedText1",
+									"referenceName": "ds_source",
 									"type": "DatasetReference",
 									"parameters": {
 										"p_file_name": {
