@@ -5,9 +5,9 @@
 		"annotations": [],
 		"type": "FileServer",
 		"typeProperties": {
-			"host": "C:\\hp",
+			"host": "C:\\adf_anshlamba_youtube_project_sources",
 			"userId": "ybsvinod@gmail.com",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkY2Q0NWVkMS0yMGNlLTQxYTQtYjNlOC0yMzdmZjQ5YzcwYzAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhMzcyYTE1My1lNmMyLTQxOGUtYWM2My0xMWVlNjBjZGE0YTYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "Self-hosted-run-time",
