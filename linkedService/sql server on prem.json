@@ -1,0 +1,21 @@
+{
+	"name": "sql server on prem",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "BALAYERUVA\\VISIONBOARD",
+			"database": "VisionBoard",
+			"encrypt": "optional",
+			"trustServerCertificate": true,
+			"authenticationType": "Windows",
+			"userName": "BALAYERUVA\\ybsvi",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4YzMwNDZlYi01ZTc2LTQyODctYjg4OC05MzA5MGM4Y2JiYjgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Self-hosted-run-time",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
