@@ -1,0 +1,17 @@
+{
+	"name": "LS_AL_File_Syestem_Connection",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\adf_anshlamba_youtube_project_sources",
+			"userId": "ybsvinod@gmail.com",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkNjk0ZTUwYy01MWIxLTQ1MWYtOWVmYi0zYmVkZDM5YTQxY2EiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Self-hosted-run-time",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
