@@ -1,0 +1,17 @@
+{
+	"name": "LS_VB_File_System_Connection",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\Vision Board Project",
+			"userId": "ybsvinod@gmail.com",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmYTZiZjAzMy01ODVkLTQyNzYtOTkxMi0xNWJkMGFiMTJmMzQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Self-hosted-run-time",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
