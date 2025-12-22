@@ -1,0 +1,21 @@
+{
+	"name": "LS_On_Prem_SQL_Server_Connection",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "BALAYERUVA\\VISIONBOARD",
+			"database": "VisionBoard",
+			"encrypt": "optional",
+			"trustServerCertificate": true,
+			"authenticationType": "Windows",
+			"userName": "ybsvinod@gmail.com",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzNmVjODhkMS1lMzhkLTRjNTgtOWVhMy00YzE0MmEyZjY2ZGYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Self-hosted-run-time",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
