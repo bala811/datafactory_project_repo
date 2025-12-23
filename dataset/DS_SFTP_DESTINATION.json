@@ -1,0 +1,23 @@
+{
+	"name": "DS_SFTP_DESTINATION",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "olist_customers_dataset",
+				"fileSystem": {
+					"value": "@concat(\n  'sftp',\n  formatDateTime(utcNow(), 'yyyy'),\n  '/',\n  formatDateTime(utcNow(), 'MM'),\n  '/',\n  formatDateTime(utcNow(), 'dd'),\n  '/'\n)\n",
+					"type": "Expression"
+				}
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

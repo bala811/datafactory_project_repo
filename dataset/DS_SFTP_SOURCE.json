@@ -1,0 +1,23 @@
+{
+	"name": "DS_SFTP_SOURCE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_ADLS_CONNECTION",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "olist_customers_dataset.csv",
+				"fileSystem": "raw-source"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
