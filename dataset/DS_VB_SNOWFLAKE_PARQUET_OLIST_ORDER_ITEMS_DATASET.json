@@ -1,0 +1,20 @@
+{
+	"name": "DS_VB_SNOWFLAKE_PARQUET_OLIST_ORDER_ITEMS_DATASET",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_BLOB_STORAGE",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "OLIST_ORDER_ITEMS_DATASET",
+				"container": "input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
