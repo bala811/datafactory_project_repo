@@ -1,0 +1,24 @@
+{
+	"name": "DS_VB_SFPT_DESTINATION",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_SFPT_DESTINATION",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "olist_customers_dataset",
+				"folderPath": {
+					"value": "@concat(\n  'SFTP',\n  formatDateTime(utcnow(),'yyyy'),\n  '/',\n  formatDateTime(utcnow(),'MM'),\n  '/',\n  formatDateTime(utcnow(),'dd')\n)\n",
+					"type": "Expression"
+				},
+				"fileSystem": "adlsdevsorce001"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

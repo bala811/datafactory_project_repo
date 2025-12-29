@@ -1,0 +1,23 @@
+{
+	"name": "DS_VB_SNOWFLAKE_PARQUET",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_SNOWFLAKE_DESTINATION",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@CONCAT(\n    'SNOWFLAKE',\n    formatdatetime(utcnow(),'yyyy'),'\\',\n    formatdatetime(utcnow(),'MM'),'\\',\n    formatdatetime(utcnow(),'DD'),'\\'\n\n)",
+					"type": "Expression"
+				},
+				"container": "input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
