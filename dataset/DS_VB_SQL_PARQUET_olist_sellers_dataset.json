@@ -1,0 +1,34 @@
+{
+	"name": "DS_VB_SQL_PARQUET_olist_sellers_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_SQL_SOURCE",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "seller_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "seller_zip_code_prefix",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "seller_city",
+				"type": "nvarchar"
+			},
+			{
+				"name": "seller_state",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "olist_sellers_dataset"
+		}
+	}
+}

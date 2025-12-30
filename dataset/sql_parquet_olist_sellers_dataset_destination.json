@@ -1,0 +1,24 @@
+{
+	"name": "sql_parquet_olist_sellers_dataset_destination",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_SQL_PARQUET_olist_sellers_dataset",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "olist_sellers_dataset",
+				"folderPath": {
+					"value": "@concat(\n        'Sellers',formatDateTime(utcnow(),'YYYT-MM-DD' )\n    )\n",
+					"type": "Expression"
+				},
+				"fileSystem": "sql-input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
