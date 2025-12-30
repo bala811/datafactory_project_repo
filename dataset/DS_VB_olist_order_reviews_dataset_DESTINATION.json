@@ -1,0 +1,24 @@
+{
+	"name": "DS_VB_olist_order_reviews_dataset_DESTINATION",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_olist_order_reviews_dataset_DESTINATION",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "order_reviews_dataset",
+				"folderPath": {
+					"value": "@concat('order_reviews',formatDateTime(utcNow(),'yyyy-MM-dd' ))",
+					"type": "Expression"
+				},
+				"fileSystem": "order-reviews"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
