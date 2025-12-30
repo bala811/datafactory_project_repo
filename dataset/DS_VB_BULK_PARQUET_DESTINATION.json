@@ -1,0 +1,24 @@
+{
+	"name": "DS_VB_BULK_PARQUET_DESTINATION",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_BULK_PARQUET",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "olist_geolocation_dataset",
+				"folderPath": {
+					"value": "@concat('bulkload-input',formatDateTime(utcNow(), 'YYYY-MM-DD')\n)",
+					"type": "Expression"
+				},
+				"fileSystem": "bulkload-input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

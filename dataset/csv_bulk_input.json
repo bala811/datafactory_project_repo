@@ -1,0 +1,23 @@
+{
+	"name": "csv_bulk_input",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_BULK_UPLOAD_SOURCE",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "BULK-UPLOAD INPUT",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
