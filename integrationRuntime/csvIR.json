@@ -1,0 +1,6 @@
+{
+	"name": "csvIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
