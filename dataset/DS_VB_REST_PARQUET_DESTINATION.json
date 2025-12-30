@@ -1,0 +1,24 @@
+{
+	"name": "DS_VB_REST_PARQUET_DESTINATION",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_REST_PARQUET_DESTINATION",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "product_category_name_translation",
+				"folderPath": {
+					"value": "@concat('rest-api', formatDateTime(utcnow(), 'YYYY-MM-DD')\n\n)",
+					"type": "Expression"
+				},
+				"fileSystem": "rest-input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
