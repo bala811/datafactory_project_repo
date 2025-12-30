@@ -1,0 +1,24 @@
+{
+	"name": "DS_VB_CSVBLOB_PAR_olist_order_payments_DESTINATION",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_CSVBLOB_PAR_olist_order_payments_DESTINATION",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "olist_order_payments",
+				"folderPath": {
+					"value": "@concat('olist_order_payments',formatDateTime(utcnow(),'yyyy-MM-dd' ))",
+					"type": "Expression"
+				},
+				"fileSystem": "olist-order-payments-data"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
