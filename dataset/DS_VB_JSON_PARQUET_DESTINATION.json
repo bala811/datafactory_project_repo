@@ -1,0 +1,24 @@
+{
+	"name": "DS_VB_JSON_PARQUET_DESTINATION",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_JSON_PARQUET_DESTINATION",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "jsonsample",
+				"folderPath": {
+					"value": "@concat('jsoninput',formatDateTime(utcnow(),'yyyy-MM-dd'))",
+					"type": "Expression"
+				},
+				"fileSystem": "json"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
