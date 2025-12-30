@@ -1,0 +1,24 @@
+{
+	"name": "DS_SQL_PARQUET_olist_products_dataset_Destination",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_VB_SQL_PARQUET_olist_products_dataset",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "olist_products_dataset",
+				"folderPath": {
+					"value": "@concat(\n    'products_dataset',formatDateTime(utcNow(),'YYYY-MM-DD' )\n)",
+					"type": "Expression"
+				},
+				"fileSystem": "sql-input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
