@@ -1,0 +1,24 @@
+{
+	"name": "ds_restAPI_par",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_restAPI_par",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "product_category_name_translation",
+				"folderPath": {
+					"value": "@concat('restAPI-',\n        formatDateTime(utcnow(),'yyyy'),'\\',\n        formatDateTime(utcnow(),'MM'),'\\',\n        formatDateTime(utcnow(),'dd'),'\\'\n\n)\n",
+					"type": "Expression"
+				},
+				"fileSystem": "adlsdevsorce001"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
