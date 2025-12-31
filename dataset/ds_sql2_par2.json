@@ -12,7 +12,7 @@
 				"type": "AzureBlobFSLocation",
 				"fileName": "olist_products_dataset",
 				"folderPath": {
-					"value": "@concat('sql2-',\n        formatDateTime(utcnow(),'yyyy'),'\\',\n        formatDateTime(utcnow(),'MM'),'\\',\n        formatDateTime(utcnow(),'dd'),'\\'\n\n)\n",
+					"value": "@concat('sql2-',\n        formatDateTime(utcnow(),'yyyy'),'\\',\n        formatDateTime(utcnow(),'MM'),'\\',\n        formatDateTime(utcnow(),'dd')\n\n)\n",
 					"type": "Expression"
 				},
 				"fileSystem": "adlsdevsorce001"
