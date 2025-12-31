@@ -1,0 +1,24 @@
+{
+	"name": "ds_sftp_par",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sftp_par",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "olist_customers_dataset",
+				"folderPath": {
+					"value": "@concat('sftp',\n        formatDateTime(utcnow(),'yyyy'),'\\',\n        formatDateTime(utcnow(),'MM'),'\\',\n        formatDateTime(utcnow(),'dd')\n\n)\n",
+					"type": "Expression"
+				},
+				"fileSystem": "adlsdevsorce001"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
