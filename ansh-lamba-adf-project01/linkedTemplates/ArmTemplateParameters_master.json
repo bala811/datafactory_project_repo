@@ -1,0 +1,171 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ansh-lamba-adf-project01"
+		},
+		"ds_excel_par_accountKey": {
+			"value": ""
+		},
+		"ls_bulk_accountKey": {
+			"value": ""
+		},
+		"ls_bulk_par_accountKey": {
+			"value": ""
+		},
+		"ls_csv_accountKey": {
+			"value": ""
+		},
+		"ls_csv_par_accountKey": {
+			"value": ""
+		},
+		"ls_eventtrigger_destination_accountKey": {
+			"value": ""
+		},
+		"ls_eventtrigger_destination1_accountKey": {
+			"value": ""
+		},
+		"ls_excel_par_accountKey": {
+			"value": ""
+		},
+		"ls_json_accountKey": {
+			"value": ""
+		},
+		"ls_json_par_accountKey": {
+			"value": ""
+		},
+		"ls_restAPI_par_accountKey": {
+			"value": ""
+		},
+		"ls_sftp_accountKey": {
+			"value": ""
+		},
+		"ls_sftp_par_accountKey": {
+			"value": ""
+		},
+		"ls_snowflake_password": {
+			"value": ""
+		},
+		"ls_snowflake_source_blob_connectionString": {
+			"value": ""
+		},
+		"ls_sql1_password": {
+			"value": ""
+		},
+		"ls_sql1_par1_accountKey": {
+			"value": ""
+		},
+		"ls_sql2_password": {
+			"value": ""
+		},
+		"ls_sql2_par2_accountKey": {
+			"value": ""
+		},
+		"ls_sql3_password": {
+			"value": ""
+		},
+		"ls_sql3_par3_accountKey": {
+			"value": ""
+		},
+		"ds_excel_par_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"ls_bulk_properties_typeProperties_url": {
+			"value": "https://adlsdevraw01.dfs.core.windows.net/"
+		},
+		"ls_bulk_par_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"ls_csv_properties_typeProperties_url": {
+			"value": "https://adlsdevraw01.dfs.core.windows.net/"
+		},
+		"ls_csv_par_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"ls_eventtrigger_destination_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"ls_eventtrigger_destination1_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"ls_excel_par_properties_typeProperties_url": {
+			"value": "https://adlsdevraw01.dfs.core.windows.net/"
+		},
+		"ls_json_properties_typeProperties_url": {
+			"value": "https://adlsdevraw01.dfs.core.windows.net/"
+		},
+		"ls_json_par_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"ls_restAPI_par_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"ls_restapi_properties_typeProperties_url": {
+			"value": "https://retoolapi.dev/G4KcdV/data"
+		},
+		"ls_sftp_properties_typeProperties_url": {
+			"value": "https://adlsdevraw01.dfs.core.windows.net/"
+		},
+		"ls_sftp_par_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"ls_snowflake_properties_typeProperties_database": {
+			"value": "VISIONBOARD"
+		},
+		"ls_snowflake_par_blobstorage_sasUri": {
+			"value": ""
+		},
+		"ls_sql1_properties_typeProperties_server": {
+			"value": "BALAYERUVA\\VISIONBOARD"
+		},
+		"ls_sql1_properties_typeProperties_database": {
+			"value": "VisionBoard"
+		},
+		"ls_sql1_properties_typeProperties_userName": {
+			"value": "BALAYERUVA\\ybsvi"
+		},
+		"ls_sql1_par1_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"ls_sql2_properties_typeProperties_server": {
+			"value": "BALAYERUVA\\VISIONBOARD"
+		},
+		"ls_sql2_properties_typeProperties_database": {
+			"value": "VisionBoard"
+		},
+		"ls_sql2_properties_typeProperties_userName": {
+			"value": "BALAYERUVA\\ybsvi"
+		},
+		"ls_sql2_par2_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"ls_sql3_properties_typeProperties_server": {
+			"value": "BALAYERUVA\\VISIONBOARD"
+		},
+		"ls_sql3_properties_typeProperties_database": {
+			"value": "VisionBoard"
+		},
+		"ls_sql3_properties_typeProperties_userName": {
+			"value": "BALAYERUVA\\ybsvi"
+		},
+		"ls_sql3_par3_properties_typeProperties_url": {
+			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
+		},
+		"trigger1_properties_pl_event_trigger_parameters_folderPath": {
+			"value": "@triggerBody().folderPath"
+		},
+		"trigger1_properties_pl_event_trigger_parameters_fileName": {
+			"value": "@triggerBody().fileName"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/729d4b14-6521-4871-bf80-c74d574154ee/resourceGroups/VB_DEV_B9_ETL/providers/Microsoft.Storage/storageAccounts/vb1blob1input"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
