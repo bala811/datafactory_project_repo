@@ -3,7 +3,18 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Stopped",
-		"pipelines": [],
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_event_trugger",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"folderpath": "@triggerBody().folderPath",
+					"filename": "@triggerBody().filename"
+				}
+			}
+		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"blobPathBeginsWith": "/snowflake/blobs/",

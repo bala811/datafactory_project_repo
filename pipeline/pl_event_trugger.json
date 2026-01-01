@@ -19,6 +19,7 @@
 						"type": "ParquetSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -50,6 +51,10 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"folderpath": {
+								"value": "@pipeline().parameters.folderpath",
+								"type": "Expression"
+							},
+							"filename": {
 								"value": "@pipeline().parameters.filename",
 								"type": "Expression"
 							}
@@ -64,6 +69,10 @@
 							"filename": {
 								"value": "@pipeline().parameters.filename",
 								"type": "Expression"
+							},
+							"folderpath": {
+								"value": "@pipeline().parameters.folderpath",
+								"type": "Expression"
 							}
 						}
 					}
@@ -71,11 +80,13 @@
 			}
 		],
 		"parameters": {
-			"filename": {
-				"type": "String"
+			"folderpath": {
+				"type": "string",
+				"defaultValue": "@triggerBody().folderPath"
 			},
-			"foldrpath": {
-				"type": "string"
+			"filename": {
+				"type": "string",
+				"defaultValue": "@triggerBody().fileName"
 			}
 		},
 		"annotations": []
