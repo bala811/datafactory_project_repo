@@ -19,11 +19,11 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@dataset().filename",
+					"value": "@dataset().fileName",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@dataset().folderpath",
+					"value": "@dataset().folderPath",
 					"type": "Expression"
 				},
 				"container": "snowflake"
