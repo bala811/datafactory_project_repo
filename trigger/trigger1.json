@@ -17,7 +17,7 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/snowflake/blobs/",
+			"blobPathBeginsWith": "/snowflake/blobs/snf-",
 			"ignoreEmptyBlobs": false,
 			"scope": "/subscriptions/729d4b14-6521-4871-bf80-c74d574154ee/resourceGroups/VB_DEV_B9_ETL/providers/Microsoft.Storage/storageAccounts/vb1blob1input",
 			"events": [
