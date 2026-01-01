@@ -72,8 +72,10 @@
 		],
 		"parameters": {
 			"filename": {
-				"type": "String",
-				"defaultValue": "@triggerBody().fileName"
+				"type": "String"
+			},
+			"foldrpath": {
+				"type": "string"
 			}
 		},
 		"annotations": []
