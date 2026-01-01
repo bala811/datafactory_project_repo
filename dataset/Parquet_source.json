@@ -6,7 +6,10 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"filename": {
+			"folderpath": {
+				"type": "string"
+			},
+			"filepath": {
 				"type": "string"
 			}
 		},
@@ -16,11 +19,11 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@dataset().filename",
+					"value": "@dataset().filepath",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@concat('snf-',\n        formatDateTime(utcnow(),'yyyy'),'\\',\n        formatDateTime(utcnow(),'MM'),'\\',\n        formatDateTime(utcnow(),'dd')\n\n)\n",
+					"value": "@dataset().folderpath",
 					"type": "Expression"
 				},
 				"container": "snowflake"

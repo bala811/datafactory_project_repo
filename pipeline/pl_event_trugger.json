@@ -19,7 +19,6 @@
 						"type": "ParquetSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"recursive": true,
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -50,7 +49,7 @@
 						"referenceName": "Parquet_source",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": {
+							"folderpath": {
 								"value": "@pipeline().parameters.filename",
 								"type": "Expression"
 							}
