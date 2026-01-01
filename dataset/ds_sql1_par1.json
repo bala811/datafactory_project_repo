@@ -1,0 +1,24 @@
+{
+	"name": "ds_sql1_par1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql1_par1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "olist_orders_dataset",
+				"folderPath": {
+					"value": "@concat('sql1-',\n        formatDateTime(utcnow(),'yyyy'),'\\',\n        formatDateTime(utcnow(),'MM'),'\\',\n        formatDateTime(utcnow(),'dd')\n\n)",
+					"type": "Expression"
+				},
+				"fileSystem": "adlsdevsorce001"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
