@@ -6,10 +6,10 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"folderpath": {
+			"folderPath": {
 				"type": "string"
 			},
-			"filename": {
+			"fileName": {
 				"type": "string"
 			}
 		},
@@ -19,11 +19,11 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().filename",
+					"value": "@dataset().fileName",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@dataset().folderpath",
+					"value": "@dataset().folderPath",
 					"type": "Expression"
 				},
 				"fileSystem": "adlsdevsorce001"

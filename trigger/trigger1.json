@@ -6,12 +6,12 @@
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "pl_event_trugger",
+					"referenceName": "pl_event_trigger",
 					"type": "PipelineReference"
 				},
 				"parameters": {
-					"folderpath": "@triggerBody().folderpath",
-					"filename": "@triggerBody().filename"
+					"folderPath": "@triggerBody().folderPath",
+					"fileName": "@triggerBody().fileName"
 				}
 			}
 		],

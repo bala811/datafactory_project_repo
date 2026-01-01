@@ -1,5 +1,5 @@
 {
-	"name": "pl_event_trugger",
+	"name": "pl_event_trigger",
 	"properties": {
 		"activities": [
 			{
@@ -50,12 +50,12 @@
 						"referenceName": "Parquet_source",
 						"type": "DatasetReference",
 						"parameters": {
-							"folderpath": {
-								"value": "@pipeline().parameters.folderpath",
+							"folderPath": {
+								"value": "@pipeline().parameters.folderPath",
 								"type": "Expression"
 							},
-							"filename": {
-								"value": "@pipeline().parameters.filename",
+							"fileName": {
+								"value": "@pipeline().parameters.fileName",
 								"type": "Expression"
 							}
 						}
@@ -66,12 +66,12 @@
 						"referenceName": "Parquet_destination",
 						"type": "DatasetReference",
 						"parameters": {
-							"folderpath": {
-								"value": "@pipeline().parameters.folderpath",
+							"folderPath": {
+								"value": "@pipeline().parameters.folderPath",
 								"type": "Expression"
 							},
-							"filename": {
-								"value": "@pipeline().parameters.filename",
+							"fileName": {
+								"value": "@pipeline().parameters.fileName",
 								"type": "Expression"
 							}
 						}
@@ -80,11 +80,11 @@
 			}
 		],
 		"parameters": {
-			"folderpath": {
+			"folderPath": {
 				"type": "string",
 				"defaultValue": "@triggerBody().folderPath"
 			},
-			"filename": {
+			"fileName": {
 				"type": "string",
 				"defaultValue": "@triggerBody().fileName"
 			}
