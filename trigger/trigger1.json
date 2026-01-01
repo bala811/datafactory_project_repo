@@ -3,18 +3,7 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [
-			{
-				"pipelineReference": {
-					"referenceName": "pl_event_trugger",
-					"type": "PipelineReference"
-				},
-				"parameters": {
-					"folderpath": "@triggerBody().folderpath",
-					"filename": "@triggerBody().filename"
-				}
-			}
-		],
+		"pipelines": [],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
 			"ignoreEmptyBlobs": true,
