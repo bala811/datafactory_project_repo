@@ -205,11 +205,11 @@
 		},
 		"trigger1_properties_pl_event_trigger_parameters_folderPath": {
 			"type": "string",
-			"defaultValue": "@trigger().outputs.body.folderPath"
+			"defaultValue": "@trigger().outputs.folderPath"
 		},
 		"trigger1_properties_pl_event_trigger_parameters_fileName": {
 			"type": "string",
-			"defaultValue": "@trigger().outputs.body.fileName"
+			"defaultValue": "@trigger().outputs.fileName"
 		},
 		"trigger1_properties_typeProperties_scope": {
 			"type": "string",
