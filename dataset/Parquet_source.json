@@ -22,10 +22,11 @@
 					"value": "@dataset().fileName",
 					"type": "Expression"
 				},
-				"container": {
+				"folderPath": {
 					"value": "@dataset().folderPath",
 					"type": "Expression"
-				}
+				},
+				"container": "snowflake"
 			},
 			"compressionCodec": "snappy"
 		},
