@@ -152,12 +152,6 @@
 		"ls_sql3_par3_properties_typeProperties_url": {
 			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
 		},
-		"trigger1_properties_pl_event_trigger_parameters_folderPath": {
-			"value": "@triggerBody().subject"
-		},
-		"trigger1_properties_pl_event_trigger_parameters_fileName": {
-			"value": "@triggerBody().fileName"
-		},
 		"trigger1_properties_typeProperties_scope": {
 			"value": "/subscriptions/729d4b14-6521-4871-bf80-c74d574154ee/resourceGroups/VB_DEV_B9_ETL/providers/Microsoft.Storage/storageAccounts/vb1blob1input"
 		}

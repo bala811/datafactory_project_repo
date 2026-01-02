@@ -203,14 +203,6 @@
 			"type": "string",
 			"defaultValue": "https://adlsdevsorce001.dfs.core.windows.net/"
 		},
-		"trigger1_properties_pl_event_trigger_parameters_folderPath": {
-			"type": "string",
-			"defaultValue": "@triggerBody().subject"
-		},
-		"trigger1_properties_pl_event_trigger_parameters_fileName": {
-			"type": "string",
-			"defaultValue": "@triggerBody().fileName"
-		},
 		"trigger1_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/729d4b14-6521-4871-bf80-c74d574154ee/resourceGroups/VB_DEV_B9_ETL/providers/Microsoft.Storage/storageAccounts/vb1blob1input"
@@ -2371,10 +2363,7 @@
 							"referenceName": "pl_event_trigger",
 							"type": "PipelineReference"
 						},
-						"parameters": {
-							"folderPath": "[parameters('trigger1_properties_pl_event_trigger_parameters_folderPath')]",
-							"fileName": "[parameters('trigger1_properties_pl_event_trigger_parameters_fileName')]"
-						}
+						"parameters": {}
 					}
 				],
 				"type": "BlobEventsTrigger",
