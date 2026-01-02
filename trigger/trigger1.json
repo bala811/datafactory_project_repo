@@ -10,7 +10,7 @@
 					"type": "PipelineReference"
 				},
 				"parameters": {
-					"folderPath": "@triggerBody().folderPath",
+					"folderPath": "@replace(triggerBody().folderPath,'snowflake/','')",
 					"fileName": "@triggerBody().fileName"
 				}
 			}
