@@ -153,7 +153,7 @@
 			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
 		},
 		"trigger1_properties_pl_event_trigger_parameters_folderPath": {
-			"value": "@triggerBody().folderPath"
+			"value": "@triggerBody().subject"
 		},
 		"trigger1_properties_pl_event_trigger_parameters_fileName": {
 			"value": "@triggerBody().fileName"
