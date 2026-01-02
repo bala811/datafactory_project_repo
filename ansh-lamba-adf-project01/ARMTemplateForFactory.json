@@ -205,11 +205,11 @@
 		},
 		"trigger1_properties_pl_event_trigger_parameters_folderPath": {
 			"type": "string",
-			"defaultValue": "snf-2025/12/31"
+			"defaultValue": "@trigger().outputs.body.folderPath"
 		},
 		"trigger1_properties_pl_event_trigger_parameters_fileName": {
 			"type": "string",
-			"defaultValue": "olist_order_items_dataset"
+			"defaultValue": "@trigger().outputs.body.fileName"
 		},
 		"trigger1_properties_typeProperties_scope": {
 			"type": "string",
@@ -458,12 +458,10 @@
 				},
 				"parameters": {
 					"folderPath": {
-						"type": "string",
-						"defaultValue": "@triggerBody().folderPath"
+						"type": "string"
 					},
 					"fileName": {
-						"type": "string",
-						"defaultValue": "@triggerBody().fileName"
+						"type": "string"
 					}
 				},
 				"annotations": []
