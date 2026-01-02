@@ -205,7 +205,7 @@
 		},
 		"trigger1_properties_pl_event_trigger_parameters_folderPath": {
 			"type": "string",
-			"defaultValue": "@triggerBody().folderPath"
+			"defaultValue": "@replace(triggerBody().folderPath,'snowflake/','')"
 		},
 		"trigger1_properties_pl_event_trigger_parameters_fileName": {
 			"type": "string",
