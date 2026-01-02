@@ -8,6 +8,10 @@
 				"pipelineReference": {
 					"referenceName": "pl_event_trigger",
 					"type": "PipelineReference"
+				},
+				"parameters": {
+					"folderPath": "snf-2025/12/31",
+					"fileName": "olist_order_items_dataset"
 				}
 			}
 		],
