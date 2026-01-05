@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ansh-lamba-adf-project01"
 		},
+		"LS_AZURE_SQL_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_AZURE_SQL'"
+		},
 		"ds_excel_par_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ds_excel_par'"
@@ -90,6 +94,18 @@
 		"ls_sql3_par3_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_sql3_par3'"
+		},
+		"LS_AZURE_SQL_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sql-srvr-vb-dev8.database.windows.net"
+		},
+		"LS_AZURE_SQL_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sql-db-vb-dev"
+		},
+		"LS_AZURE_SQL_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "access-data-dev"
 		},
 		"ds_excel_par_properties_typeProperties_url": {
 			"type": "string",
@@ -242,6 +258,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"LS_AZURE_SQL_password": {
+						"value": "[parameters('LS_AZURE_SQL_password')]"
+					},
 					"ds_excel_par_accountKey": {
 						"value": "[parameters('ds_excel_par_accountKey')]"
 					},
@@ -293,8 +312,14 @@
 					"ls_sql2_par2_accountKey": {
 						"value": "[parameters('ls_sql2_par2_accountKey')]"
 					},
-					"ls_sql3_par3_accountKey": {
-						"value": "[parameters('ls_sql3_par3_accountKey')]"
+					"LS_AZURE_SQL_properties_typeProperties_server": {
+						"value": "[parameters('LS_AZURE_SQL_properties_typeProperties_server')]"
+					},
+					"LS_AZURE_SQL_properties_typeProperties_database": {
+						"value": "[parameters('LS_AZURE_SQL_properties_typeProperties_database')]"
+					},
+					"LS_AZURE_SQL_properties_typeProperties_userName": {
+						"value": "[parameters('LS_AZURE_SQL_properties_typeProperties_userName')]"
 					},
 					"ds_excel_par_properties_typeProperties_url": {
 						"value": "[parameters('ds_excel_par_properties_typeProperties_url')]"
@@ -349,9 +374,6 @@
 					},
 					"ls_sql2_par2_properties_typeProperties_url": {
 						"value": "[parameters('ls_sql2_par2_properties_typeProperties_url')]"
-					},
-					"ls_sql3_par3_properties_typeProperties_url": {
-						"value": "[parameters('ls_sql3_par3_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -370,6 +392,12 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_sql3_par3_accountKey": {
+						"value": "[parameters('ls_sql3_par3_accountKey')]"
+					},
+					"ls_sql3_par3_properties_typeProperties_url": {
+						"value": "[parameters('ls_sql3_par3_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -426,6 +454,26 @@
 					},
 					"ls_sql3_properties_typeProperties_userName": {
 						"value": "[parameters('ls_sql3_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ansh-lamba-adf-project01_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "ansh-lamba-adf-project01_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
 					},
 					"trigger1_properties_pl_event_trigger_parameters_folderPath": {
 						"value": "[parameters('trigger1_properties_pl_event_trigger_parameters_folderPath')]"
@@ -439,7 +487,7 @@
 				}
 			},
 			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'ansh-lamba-adf-project01_ArmTemplate_1')]"
+				"[resourceId('Microsoft.Resources/deployments', 'ansh-lamba-adf-project01_ArmTemplate_2')]"
 			]
 		}
 	]

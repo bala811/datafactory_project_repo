@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "ansh-lamba-adf-project01"
 		},
+		"LS_AZURE_SQL_password": {
+			"value": ""
+		},
 		"ds_excel_par_accountKey": {
 			"value": ""
 		},
@@ -67,6 +70,15 @@
 		},
 		"ls_sql3_par3_accountKey": {
 			"value": ""
+		},
+		"LS_AZURE_SQL_properties_typeProperties_server": {
+			"value": "sql-srvr-vb-dev8.database.windows.net"
+		},
+		"LS_AZURE_SQL_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"LS_AZURE_SQL_properties_typeProperties_userName": {
+			"value": "access-data-dev"
 		},
 		"ds_excel_par_properties_typeProperties_url": {
 			"value": "https://adlsdevsorce001.dfs.core.windows.net/"
