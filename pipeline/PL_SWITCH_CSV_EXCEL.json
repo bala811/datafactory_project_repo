@@ -1,9 +1,9 @@
 {
-	"name": "PL2_RAW_DATA",
+	"name": "PL_SWITCH_CSV_EXCEL",
 	"properties": {
 		"activities": [
 			{
-				"name": "LKUP_L2_TYPE",
+				"name": "LKUP_GET_FILETYPE_CSV_EXCEL",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -18,24 +18,24 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT DISTINCT L2_switch_type \nFROM dbo.vb_tbl_job a\nJOIN dbo.vb_tbl_trigger b ON a.trigger_id = b.trigger_id\nWHERE b.trigger_name = '@{pipeline().parameters.Trigger}'",
+							"value": "SELECT DISTINCT L4_switch_type \nFROM dbo.vb_tbl_job a\nJOIN dbo.vb_tbl_trigger b ON a.trigger_id = b.trigger_id\nWHERE b.trigger_name = '@{pipeline().parameters.Trigger}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "AzureSqlTable3",
 						"type": "DatasetReference"
 					}
 				}
 			},
 			{
-				"name": "SWITCH_SOURCE",
+				"name": "Switch_CSV_EXCEL",
 				"type": "Switch",
 				"dependsOn": [
 					{
-						"activity": "LKUP_L2_TYPE",
+						"activity": "LKUP_GET_FILETYPE_CSV_EXCEL",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -44,15 +44,15 @@
 				"userProperties": [],
 				"typeProperties": {
 					"on": {
-						"value": "@activity('LKUP_L2_TYPE').output.firstRow.L2_switch_type",
+						"value": "@activity('LKUP_GET_FILETYPE_CSV_EXCEL').output.firstRow.L4_switch_type",
 						"type": "Expression"
 					},
 					"cases": [
 						{
-							"value": "CloudStorage",
+							"value": "csv",
 							"activities": [
 								{
-									"name": "EXEC_PL3_CLOUD",
+									"name": "Execute Pipeline1",
 									"type": "ExecutePipeline",
 									"dependsOn": [],
 									"policy": {
@@ -61,7 +61,7 @@
 									"userProperties": [],
 									"typeProperties": {
 										"pipeline": {
-											"referenceName": "PL3_CLOUDSG_CSV_EXCEL",
+											"referenceName": "pl_csv",
 											"type": "PipelineReference"
 										},
 										"waitOnCompletion": true,
@@ -76,7 +76,7 @@
 							]
 						},
 						{
-							"value": "API",
+							"value": "excel",
 							"activities": [
 								{
 									"name": "Wait1",
@@ -96,11 +96,6 @@
 		"parameters": {
 			"Trigger": {
 				"type": "string"
-			}
-		},
-		"variables": {
-			"Mapping": {
-				"type": "String"
 			}
 		},
 		"annotations": []
