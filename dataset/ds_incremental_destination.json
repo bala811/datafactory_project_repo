@@ -1,0 +1,19 @@
+{
+	"name": "ds_incremental_destination",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_incremental_destination",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "adlsdevsorce001"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
