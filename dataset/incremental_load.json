@@ -1,0 +1,35 @@
+{
+	"name": "incremental_load",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "emp_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "emp_name",
+				"type": "varchar"
+			},
+			{
+				"name": "gender",
+				"type": "char"
+			},
+			{
+				"name": "dept_id",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Employees"
+		}
+	}
+}
